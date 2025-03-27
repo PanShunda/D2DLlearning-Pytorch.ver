@@ -88,6 +88,9 @@ def train(net, num_gpus, batch_size, lr):
     net.apply(init_weights)
 
     # 将模型包装为DataParallel以支持多GPU并行
+    '''
+    主要就是下面这行↓
+    '''
     net = nn.DataParallel(net, device_ids=devices)
     # 定义优化器和损失函数
     trainer = torch.optim.SGD(net.parameters(), lr)
@@ -101,6 +104,7 @@ def train(net, num_gpus, batch_size, lr):
         net.train()
         timer.start()
         # 训练迭代：前向传播、计算损失、反向传播、参数更新
+        # 将X分割为多个GPU，并使用DataParallel进行并行计算
         for X, y in train_iter:
             trainer.zero_grad()
             X, y = X.to(devices[0]), y.to(devices[0])
