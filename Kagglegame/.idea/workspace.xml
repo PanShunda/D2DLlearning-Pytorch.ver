@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3b6ba1e-dfae-406c-bf6d-77776bf5d289" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RNN/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RNN/RNN_fromzero.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sequence_slides/.idea/sequence_slides.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +115,10 @@
       <workItem from="1743391725340" duration="1523000" />
       <workItem from="1743406239279" duration="3512000" />
       <workItem from="1743416353869" duration="376000" />
+      <workItem from="1743485402179" duration="13000" />
+      <workItem from="1743507232325" duration="86000" />
+      <workItem from="1743594703050" duration="13000" />
+      <workItem from="1743835315177" duration="13000" />
     </task>
     <servers />
   </component>

@@ -152,6 +152,8 @@ valid_ds, test_ds = [
 
 
 # 创建数据加载器
+# 训练集和测试集的drop_last参数设置为True，因为要保证每一个batch的大小是相等的。
+# 但是验证集的drop_last参数设置为False，不能随意丢弃，这可是要算分的！
 train_iter, train_valid_iter = [
     torch.utils.data.DataLoader(dataset, batch_size, shuffle=True, drop_last=True)
     for dataset in (train_ds, train_valid_ds)
@@ -159,7 +161,7 @@ train_iter, train_valid_iter = [
 # 测试数据加载器不需要随机打乱数据，所以此处的shuffle=False
 valid_iter = torch.utils.data.DataLoader(valid_ds, batch_size, shuffle=False, drop_last=True)
 test_iter = torch.utils.data.DataLoader(test_ds, batch_size, shuffle=False, drop_last=False)
-
+#
 
 def get_net():
     """创建ResNet-18分类模型。
